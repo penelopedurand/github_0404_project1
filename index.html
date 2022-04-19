@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="/index.css"/>
+    <title>Breweries</title>
     <script defer src="./Javascript/index.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="logo">
+      <h1>Breweries</h1>
+    </div>
+
+    <div id = "brewery-bar">
+      <!-- show breweries names here -->
+    </div>
+
+    <div class="breweryInfo">
+      <div id="detailed-info">
+        <p id="name">Brewery Name</p>
+        <p id="city">City</p>
+        <p id="state">State</p>
+        <!-- <img
+          id="image"
+          src=" "
+          alt="Brewery Name" />-->
+        <!-- display brewery image here -->
+        <br>
+      </div>
+  <div id="finalize-votes-review">
+    <div class="votes">
+        <button id="likes" style="text-align: center;">Likes</button>
+        <button id="dislikes" style="text-align: center;">Dislikes</button>
+    </div>
+    <div class="leaving-thoughts">
+        <form id="review"></form>
+        <h4>Reviews <span id="reviews">Brewery Review</span></h4>
+          <input type="text" placeholder="Enter Review" id="Reviews" name="review" />
+          <input type="submit"/>
+        </form>
+      </div>
+        <!-- <button id="reset-btn">Reset Reviews</button> -->
+      </div>
+    </div>  
+  </body>
 </html>
+</head>
+
+
+    

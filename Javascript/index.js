@@ -10,4 +10,26 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(arrBrew => individBrew(arrBrew))
 });
 
-// 
+const individBrew = (arr) => {
+    arr.forEach(brewObj => {
+    const div = document.querySelector('.logo')
+    const ul = document.createElement('ul')
+    ul.textContent = brewObj.name
+    // console.log(brewObj.name)
+    div.appendChild(ul);
+    ul.addEventListener('click', () => handleClick(brewObj))
+})
+}
+
+function handleClick(brewObj) {
+    const div = document.querySelector('#detailed-info')
+    const bName  = document.querySelector('#name')
+    const bCity = document.querySelector('#city')
+    const bState = document.querySelector('#state')
+    bName.textContent = brewObj.name
+    bCity.textContent = brewObj.city
+    bState.textContent = brewObj.state
+}
+
+
+//
