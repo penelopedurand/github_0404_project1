@@ -4,10 +4,22 @@
 // Submit form for likes (user can “like” the brewery)
 // Submit a form to leave a review of the brewery.
 
-window.addEventListener('DOMContentLoaded', () => {
-    fetch("https://api.openbrewerydb.org/breweries")
-    .then(resp => resp.json())
-    .then(arrBrew => individBrew(arrBrew))
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-// 
+    const arrBrew = "https://api.openbrewerydb.org/breweries"
+
+    fetch(arrBrew)
+    .then(resp => resp.json())
+    .then(data => {
+
+        function breweryName(name) {
+            const container = document.getElementById("brewery-list")
+            const arrName = document.createElement('name')
+
+        arrBrew.forEach(breweryName => renderName(breweryName));
+
+        }
+    
+   
+
+})})
