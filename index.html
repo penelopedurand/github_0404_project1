@@ -28,17 +28,24 @@
       </div>
   <div id="finalize-votes-review">
     <div class="votes">
-        <button id="likes" style="text-align: center;">Likes</button>
-        <button id="dislikes" style="text-align: center;">Dislikes</button>
+        <button id="likes" onclick="likeIncrement()" style="text-align: center;">Likes</button>
+        <h4 id="likes-count">0</h4>
+        <button id="dislikes" onclick="disIncrement()" style="text-align: center;">Dislikes</button>
+        <h4 id="dislikes-count">0</h4>
     </div>
-    <div class="leaving-thoughts">
-        <form id="review"></form>
-        <h4>Reviews <span id="reviews">Brewery Review</span></h4>
-          <input type="text" placeholder="Enter Review" id="Reviews" name="review" />
-          <input type="submit"/>
+    <!-- comment section -->
+    <div class="container">
+      <form id="comment-form">
+        <div id="comment-section" class="form-group">
+          <textarea value="" id="txtarea" class="form-control status-box" rows="3" placeholder="Enter your brewery review here..."></textarea>
+        </div>
+        <button id="post-comment">POST</button>
+      </form>
+      <div class="button-group pull-right">
+      
+      </div>
         </form>
       </div>
-        <!-- <button id="reset-btn">Reset Reviews</button> -->
       </div>
     </div>  
   </body>

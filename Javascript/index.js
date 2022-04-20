@@ -31,5 +31,38 @@ function handleClick(brewObj) {
     bState.textContent = brewObj.state
 }
 
+// Likes Counter
+const likesCount = document.getElementById("likes-count")
+let upCount = 0
+function likeIncrement(){
+    upCount = upCount + 1
+    likesCount.innerText = upCount
+}
+// Dislikes Counter
+const dislikesCount = document.getElementById("dislikes-count")
+let disCount = 0 
+function disIncrement(){
+    disCount = disCount + 1
+    dislikesCount.innerText = disCount
+}
 
-//
+//Comment Section
+const form = document.querySelector('#comment-form')
+ form.addEventListener('submit', handleSubmit)
+
+ function handleSubmit (e) {
+     e.preventDefault();
+     console.log(e)
+     const div = document.querySelector("#detailed-info")
+     const textarea = document.getElementById("txtarea")
+    // const newComment = textarea.value
+     const disComment = document.createElement('p')
+     disComment.textContent = textarea.value
+     div.append(disComment)
+    
+
+
+        
+    }
+    form.reset()
+
