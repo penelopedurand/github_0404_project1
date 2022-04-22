@@ -1,5 +1,5 @@
 body .logo{
-  background-color: rgba(227, 195, 107, 0.975);
+  background-color: rgba(20, 99, 141, 0.975);
   margin: 0;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,12 +14,12 @@ body .logo{
     border: black;
   }
   .breweryInfo #detailed-info{
-    height: 180px;
+    height: 220px;
     padding: 30px;
     font-size: 24px;
     border: groove;
     border-width: medium;
-    border-color: aquamarine;
+    border-color: orange;
     text-align: center;
   }
   #finalize-votes-review{
