@@ -18,6 +18,17 @@ const individBrew = (arr) => {
     // console.log(brewObj.name)
     div.appendChild(ul);
     ul.addEventListener('click', () => handleClick(brewObj))
+// mouseover Event
+// let bar = document.querySelector('#brewery-bar')
+ul.addEventListener("mouseover", (e) => {
+    // highlight the mouseover target
+    e.target.style.color = "orange";
+  
+    // reset the color after a short delay
+    setTimeout(() => {
+      e.target.style.color = "";
+    }, 500);
+  }, false);
 })
 }
 
@@ -26,9 +37,11 @@ function handleClick(brewObj) {
     const bName  = document.querySelector('#name')
     const bCity = document.querySelector('#city')
     const bState = document.querySelector('#state')
+    const comment = document.getElementById('commentarea')
     bName.textContent = brewObj.name
     bCity.textContent = brewObj.city
     bState.textContent = brewObj.state
+    comment.textContent = " "
 }
 
 // Likes Counter
@@ -56,13 +69,10 @@ const form = document.querySelector('#comment-form')
      const div = document.querySelector("#detailed-info")
      const textarea = document.getElementById("txtarea")
     // const newComment = textarea.value
-     const disComment = document.createElement('p')
+     const disComment = document.getElementById('commentarea')
      disComment.textContent = textarea.value
-     div.append(disComment)
-    
-
-
-        
+    //  div.append(disComment)
+     form.reset()
     }
-    form.reset()
+    
 
